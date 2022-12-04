@@ -14,6 +14,7 @@ int main()
                   {"B",
                    200}});
     map<string, int>::iterator iter;
+    
     for (iter = marks.begin(); iter != marks.end(); iter++)
     {
         cout << (*iter).first << " " << (*iter).second << endl;

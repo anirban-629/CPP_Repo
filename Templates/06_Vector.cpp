@@ -18,13 +18,14 @@ int main()
     {
         vec1.push_back(i + 100);
     }
-    cout << "Initial -> ";
-    display(vec1);
-    cout << "Pop Back -> ";
-    vec1.pop_back();
-    display(vec1);
-    cout << "Insert(iter) -> ";
+    // cout << "Initial -> ";
+    // display(vec1);
+    // cout << "Pop Back -> ";
+    // vec1.pop_back();
+    // display(vec1);
+    // cout << "Insert(iter) -> ";
     vector<int>::iterator iter = vec1.begin();
+    cout << "Insert at first position (iter) -> ";
     vec1.insert(iter, 1);
     display(vec1);
     cout << "Insert at next position (iter) -> ";
@@ -35,6 +36,5 @@ int main()
     display(vec1);
     cout << "Erase -> ";
 
-   
-    return 0;
+       return 0;
 }
