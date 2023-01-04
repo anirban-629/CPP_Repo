@@ -1,23 +1,26 @@
 #include <iostream>
+
 using namespace std;
-void duplicateString(int str, int size)
+
+void duplicateString(string str, int size)
 {
-    int lastDuplicate = 0, j = 0;
-    for (int i = 0; i < size - 1; i++)
+    int hash[26] = {0};
+    for (int i = 0; str[i] != '\0'; i++)
     {
-        if (str[i] == str[i + 1])
+        hash[int(str[i] - 97)] += 1;
+    }
+    for (int j = 0; j < 26; j++)
+    {
+        if (hash[j] > 1)
         {
-            j = i + 1;
-            while (str[j] == str[i])
-                j++;
-            cout << str[i] << " is appearing " << j - i << " times" << endl;
-            i = j - 1;
+            cout << char(j + 97) << " is repeated " << hash[j] << " times" << endl;
         }
     }
 }
+
 int main()
 {
     string str = "finding";
-
+    duplicateString(str, str.length());
     return 0;
 }
