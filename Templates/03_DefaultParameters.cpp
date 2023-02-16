@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 template <class T1 = int, class T2 = int>
 class myClass
 {
@@ -16,6 +17,7 @@ public:
         cout << data1 << data2 << endl;
     }
 };
+
 int main()
 {
 

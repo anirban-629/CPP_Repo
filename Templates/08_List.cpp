@@ -13,7 +13,7 @@ void display(list<int> &l1)
 
 int main()
 {
-    list<int> l1; //  Lenhth - 0
+    list<int> l1; //  Length - 0
     l1.push_back(1);
     l1.push_back(2);
     l1.push_back(3);

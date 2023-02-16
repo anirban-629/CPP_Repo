@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 template <class T1, class T2>
 float funcAverage(T1 a, T2 b)
 {
@@ -13,6 +14,7 @@ void swapp(T &a, T &b)
     a = b;
     b = temp;
 }
+
 int main()
 {
     printf("Average: %.3f\n", funcAverage(10.864984, 25.484986419841651894894));
@@ -24,6 +26,9 @@ int main()
     swapp(x, y);
     cout << x << endl
          << y << endl;
+
+
+
 
     return 0;
 }

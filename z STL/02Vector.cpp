@@ -5,14 +5,15 @@ using namespace std;
 
 int main()
 {
-
      vector<int> v;
      cout << "Elements -> " << v.size() << endl
           << "Capacity(size) -> " << v.capacity() << endl;
+
      v.push_back(1);
      v.push_back(2);
      cout << "Elements -> " << v.size() << endl
           << "Capacity(size) -> " << v.capacity() << endl;
+
      v.push_back(3);
      cout << "Elements -> " << v.size() << endl
           << "Capacity(size) -> " << v.capacity() << endl;
@@ -23,9 +24,8 @@ int main()
           << v.front() << endl
           << "---------------" << endl
           << v.back() << endl
-          << "---------------" << endl;
-
-     cout << "-------Pop-------" << endl
+          << "---------------" << endl
+          << "-------Pop-------" << endl
           << v.back() << endl
           << v.size() << endl
           << v.capacity() << endl;

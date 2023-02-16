@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 template <class T>
 class A
 {
@@ -28,6 +29,7 @@ void func(T a)
 {
     cout << "Templated func " << a << endl;
 }
+
 int main()
 {
     A<int> a(100);

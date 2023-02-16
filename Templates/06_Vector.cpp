@@ -36,5 +36,5 @@ int main()
     display(vec1);
     cout << "Erase -> ";
 
-       return 0;
+    return 0;
 }
