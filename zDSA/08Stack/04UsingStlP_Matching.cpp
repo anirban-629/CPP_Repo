@@ -21,7 +21,8 @@ bool isBalanced(string exp){
             s.push(exp[i]);
         }
         else if(exp[i]==')'||exp[i]=='}'||exp[i]==']'){
-            if(s.empty()){
+            char openingSymbol=exp[i]==')'?int(exp[i])-1:int(exp[i])-2;
+            if(s.empty()||s.top()!=openingSymbol){
                 return false;
             }
             s.pop();
@@ -33,7 +34,7 @@ bool isBalanced(string exp){
 
 
 int main(){
-    string exp="(a+b)";
+    string exp="[a+b]";
     cout<<isBalanced(exp);
     return 0;
 }

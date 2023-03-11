@@ -43,7 +43,7 @@ void p3(){
 //        if(temp>0){
 //            arr[i]=temp;
 //            activeProduct++;
-//            cout<<"TRIGGERERD - "<<activeProduct<<endl;
+//            cout<<"TRIGGEREeRD - "<<activeProduct<<endl;
 //        }
 //    }
 ////    for(int i=0;i<sizeof(arr)/sizeof(int);i++){

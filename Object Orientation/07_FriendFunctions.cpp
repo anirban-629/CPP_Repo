@@ -3,7 +3,6 @@ using namespace std;
 class Complex
 {
     int a, b;
-
 public:
     void setNumber(int n1, int n2)
     {
@@ -12,7 +11,10 @@ public:
     }
     friend Complex sumComplex(Complex, Complex);
     // -> [friend](keyword) -> Giving the access to the function cumComplex to access the private members
-    void printNumber() { cout << a << "+" << b << "i" << endl; }
+    void printNumber()
+    {
+        cout << a << "+" << b << "i" << endl;
+    }
 };
 Complex sumComplex(Complex o1, Complex o2)
 {

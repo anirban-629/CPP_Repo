@@ -4,12 +4,18 @@ class Base
 {
 public:
     int var1;
-    void display() { cout << "Base Class " << var1 << endl; }
+    void display()
+    {
+        cout << "Base Class " << var1 << endl;
+    }
 };
 class Derived : public Base
 {
     int var2;
-    void display() { cout << "Derived Class " << var2 << endl; }
+    void display()
+    {
+        cout << "Derived Class " << var2 << endl;
+    }
 };
 int main()
 {
