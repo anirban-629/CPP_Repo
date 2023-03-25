@@ -3,54 +3,61 @@
 #include<vector>
 using namespace std;
 
-int pre(char c)
-{
-    if(c=='+'||c=='-')
+bool isOperand(char x){
+    if(x=='+'||x=='-'||x=='*'||x=='/'){
+        return false;
+    }
+    return true;
+}
+
+int pre(char x){
+    if(x=='+'||x=='-'){
         return 1;
-    if(c=='*'||c=='/')
-        return 1;
+    }
+    else if(x=='*'||x=='/'){
+        return 2;
+    }
     return 0;
 }
 
-bool isOperand(char c)
-{
-    if(c=='+'||c=='-'||c=='*'||c=='/')
-        return 0;
-    return 1;
-}
-
-string convert(string str)
-{
+string convert(string s){
     stack<char> st;
-    vector<char> postfix_exp;
-    string postfix="ABC";
+    string postfixExp="";
     int i=0,j=0;
-    while(i<str.length()){
-        if(isOperand(str[i])){
-            postfix_exp[j++]=str[i++];
+    while(j<s.length()){
+        if(isOperand(s[i])){
+            postfixExp+=s[i++];
         }
         else{
-            if(pre(str[i])>pre(st.top())){
-                st.push(str[i]);
+            if(st.empty()){
+                if(isOperand(s[i]))
+                    postfixExp+=s[i++];
+                else
+                    st.push(s[i++]);
             }
             else{
-                postfix_exp[j++]=st.top();
-                st.pop();
+                if(pre(s[i])>pre(st.top())){
+                    st.push(s[i++]);
+                }
+                else{
+                    postfixExp+=st.top();
+                    st.pop();
+                    i++;
+                }
             }
         }
+        j++;
     }
-
-    for(int i=0;i<postfix_exp.size();i++){
-        cout<<postfix_exp[i]<<" ";
+    while(!st.empty()){
+        postfixExp+=st.top();
+        st.pop();
     }
-
-    return postfix;
+    return postfixExp;
 }
 
-int main()
-{
-    string str="a+b*c-d/e";
-    string postfix=convert(str);
-    cout<<postfix;
+int main(){
+//    string s="a+b*c-d/e";
+    string s="a+b*c";
+    cout<<convert(s);
     return 0;
 }
