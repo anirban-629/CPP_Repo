@@ -42,7 +42,7 @@ int Max(node *root){
 int Min(node *root){
     if(root==NULL)return -1;
     if(root->left==NULL)return root->data;
-    Min(root->left);
+    return Min(root->left);
 }
 
 int FindHeight(node *root){
