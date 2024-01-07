@@ -1,0 +1,14 @@
+// Capacity
+bool empty() const;
+size_t size() const;
+
+// Element access
+reference front();
+const_reference front() const;
+reference back();
+const_reference back() const;
+
+// Modifiers
+void push(const value_type& val);
+void pop();
+void swap(queue& other);
